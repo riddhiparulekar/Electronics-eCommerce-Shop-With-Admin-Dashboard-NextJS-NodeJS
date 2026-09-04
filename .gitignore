@@ -38,9 +38,9 @@ next-env.d.ts
 
 # Database backups
 /backups/
-*.sql
-*.dump
-*.backup
+-*.sql
+-*.dump
+-*.backup
 
 # Logs
 *.log

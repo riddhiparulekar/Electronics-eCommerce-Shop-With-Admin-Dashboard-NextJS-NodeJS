@@ -5,17 +5,25 @@ Admins get a separate dashboard to manage products, categories, merchants, order
 The app is split into two parts: a Next.js frontend (the website + admin UI) and a separate Node.js/Express backend (the REST API), both talking to a shared MySQL database through Prisma. 
 
 # Optimisation Choices
+Next.js - output: "standalone"  added to trace only files that are needed at runtime
+Multi-stage Docker build in Dockerfile 
 
- multi-stage Docker build
-, base image choice used node:20-alpine , layer caching, .dockerignore,
+Base image used : node:20-alpine
 
+layer caching
 
+.dockerignore
 
 # Final Image Size
+Before optimzation :
+Frontend image size: 1.1GB
+Backend image size: 579MB
 
-<!-- output of docker images before/after optimisation -->
+After Optimization:
+Final backend image size is 129MB
+Final Frontend image size is 144MB
 
 # Architecture Notes
 
-<!--  frontend (Next.js) + backend (Express)+ Mysql (database)  as separate services/containers, how they talk to each other -->
+frontend (Next.js) + backend (Express)+ Mysql (database)  as separate containers
 

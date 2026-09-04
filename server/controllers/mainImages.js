@@ -11,7 +11,7 @@ async function uploadMainImage(req, res) {
     const uploadedFile = req.files.uploadedFile;
   
     // Using mv method for moving file to the directory on the server
-    uploadedFile.mv(path.join(__dirname, '..', 'public', uploadedFile.name), (err) => {
+    uploadedFile.mv('../public/' + uploadedFile.name, (err) => {
       if (err) {
         return res.status(500).send(err);
       }

@@ -70,7 +70,7 @@ services:
     networks:
       - app-net
     ports:
-      - "3006:3000"
+      - "80:3000"
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:3000"]
       interval: 10s

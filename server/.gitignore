@@ -12,9 +12,9 @@ logs/
 
 # Database backups
 backups/
-*.sql
-*.dump
-*.backup
+-*.sql
+-*.dump
+-*.backup
 
 # IDE
 .vscode/
@@ -29,6 +29,7 @@ Thumbs.db
 # Temporary files
 tmp/
 temp/
++test-output.txt
 
 # Logs
 *.log

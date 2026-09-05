@@ -1,5 +1,6 @@
+const path = require("path");
 const { PrismaClient } = require("@prisma/client");
-const prisma = require("../utills/db"); // ✅ Use shared connection
+const prisma = require("../utills/db"); // Use shared connection
 
 async function uploadMainImage(req, res) {
     if (!req.files || Object.keys(req.files).length === 0) {
